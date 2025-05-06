@@ -14,11 +14,6 @@ export const MaxEffectGroup = {
       MaxEffectsMatchNames.parade,
     ) as PropertyGroup;
 
-    // const slider1 = group.addProperty(
-    //   MaxEffectsMatchNames.expressionControl.slider.group,
-    // ) as PropertyGroup;
-
-    // group.this.effectGroup = group;
     return this;
   },
 

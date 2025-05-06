@@ -12,9 +12,7 @@
     "delsymlink": "cross-env ACTION=delsymlink vite"
   },
   "dependencies": {
-    "@types/lodash": "^4.17.16",
     "autoprefixer": "^10.4.20",
-    "lodash": "^4.17.21",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.14",
     "vue": "^3.2.45"

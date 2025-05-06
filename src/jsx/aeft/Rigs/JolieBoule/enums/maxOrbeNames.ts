@@ -1,17 +1,13 @@
-// export const MTB_RIGS_NAMES = "Mtb";
-
 import { MTB_RIGS_NAMES } from "../../enums/MtbRigsNames";
 
-// export const ORG_FULLNAME = "Motiontober";
-export const RIG_NAME = "JolieBoule";
+export const JOLIEBOULE = "JolieBoule";
+export const MainIdentifier = `${MTB_RIGS_NAMES.ORG.toLowerCase()}-${JOLIEBOULE.toLowerCase()}`
+export const MainController = `[CTRL] - ${JOLIEBOULE}`;
+export const MainPseudoEffect = `${MTB_RIGS_NAMES.ORG} - ${JOLIEBOULE}`;
+export const MainShapeLayer = JOLIEBOULE;
 
-export const MainIdentifier = `${MTB_RIGS_NAMES.ORG.toLowerCase()}-${RIG_NAME.toLowerCase()}`
-export const MainController = `[CTRL] - ${RIG_NAME}`;
-export const MainPseudoEffect = `${MTB_RIGS_NAMES.ORG} - ${RIG_NAME}`;
-export const MainShapeLayer = RIG_NAME;
-
-export const Leg1 = "Leg - 1";
-export const Leg2 = "Leg - 2";
+export const Orbiter1 = "Orbiter - 1";
+export const Orbiter2 = "Orbiter - 2";
 
 export const TOP = {
   _: "Top",
@@ -183,7 +179,7 @@ export const CTRL_MENU = {
 //     _: "Transform",
 //     positionOffset: "Anchor Offset",
 //     legs: {
-//       _: "Legs",
+//       _: "Orbiters",
 //       offset: "body.leg.offset"
 //     }
 //   },

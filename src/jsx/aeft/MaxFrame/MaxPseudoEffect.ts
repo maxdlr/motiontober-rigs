@@ -1,4 +1,3 @@
-import { MainPseudoEffect } from "../Rigs/JolieBoule/enums/maxOrbeNames";
 import { MaxEffectsMatchNames } from "./ADBE-match-names/MaxEffectsMatchNames";
 
 export const MaxPseudoEffect = {
@@ -6,6 +5,7 @@ export const MaxPseudoEffect = {
     matchName: string;
     presetName: string;
     presetBinary: string;
+    effectName: string;
   },
 
   effect: {} as PropertyGroup,
@@ -14,6 +14,7 @@ export const MaxPseudoEffect = {
     matchName: string;
     presetName: string;
     presetBinary: string;
+    effectName: string;
   }) {
     this.pseudoEffect = config;
     return this;
@@ -31,7 +32,7 @@ export const MaxPseudoEffect = {
     }
 
     this.effect = layerEffect.property(this.pseudoEffect.matchName) as PropertyGroup;
-    this.effect.name = MainPseudoEffect;
+    this.effect.name = this.pseudoEffect.effectName;
 
     return this;
   },

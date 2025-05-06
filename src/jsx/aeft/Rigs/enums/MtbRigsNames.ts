@@ -1,4 +1,4 @@
-import _ from "lodash";
+import { kebabCase, upperFirst } from "../../MaxFrame/utils/MaxGeneralUtils"
 
 const base: { [key: string]: string } = {
   mtb: "mtb",
@@ -7,8 +7,8 @@ const base: { [key: string]: string } = {
 }
 
 export const MTB_RIGS_NAMES = {
-  ORG: _.upperFirst(base.mtb),
-  FULL_ORG: _.upperFirst(base.motiontober),
-  EXTENSION_NAME: _.upperFirst(base.fullname),
-  EXTENSION_IDENTIFIER: _.kebabCase(base.fullname)
+  ORG: upperFirst(base.mtb),
+  FULL_ORG: upperFirst(base.motiontober),
+  EXTENSION_NAME: upperFirst(base.fullname),
+  EXTENSION_IDENTIFIER: kebabCase(base.fullname)
 }

@@ -1,9 +1,8 @@
 import { createJolieBoule } from "./Rigs/JolieBoule";
 
-
-export const rigs = {
-  addJolieBoule: () => {
-    alert("caca")
-    createJolieBoule()
+export const rigs = () => {
+  return {
+    createJolieBoule
   }
 }
+

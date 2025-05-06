@@ -1,7 +1,7 @@
 // Binary file reader and writer
 try {
   // Open the source file in binary mode
-  var sourceFile = new File("./src/jsx/aeft/MaxOrbe/pseudo.ffx");
+  var sourceFile = new File("./src/jsx/aeft/Rigs/JolieBoule/pseudo.ffx");
   sourceFile.encoding = "BINARY";
   sourceFile.open("r"); // Changed from "e" to "r" for read mode
 
@@ -12,7 +12,7 @@ try {
   }
 
   // Create and write to the destination file
-  var outputFile = new File("./src/jsx/aeft/MaxOrbe/pseudo-binary.txt");
+  var outputFile = new File("./src/jsx/aeft/Rigs/JolieBoule/jolieboule-binary.txt");
   outputFile.open("w");
   outputFile.encoding = "BINARY";
   outputFile.write(binaryData);

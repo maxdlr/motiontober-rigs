@@ -153,7 +153,7 @@ export const MAXORBE_REFLECTION_TRIM = {
 
 ////////////////////// ----------------- //////////////////////
 
-export const MAXORBE_LEG_ONE = {
+export const MAXORBE_ORBITER_ONE = {
   position: {
     x: `yRotValue = ${getEffectPropertyExpression(CTRL_MENU_IDS.dynamics.rotation.y)};
 bodySize = ${getEffectPropertyExpression(CTRL_MENU_IDS.design.size)};
@@ -188,7 +188,7 @@ result;`
   },
 }
 
-export const MAXORBE_LEG_TWO = {
+export const MAXORBE_ORBITER_TWO = {
   position: {
     x: `yRotValue = ${getEffectPropertyExpression(CTRL_MENU_IDS.dynamics.rotation.y)};
 bodySize = ${getEffectPropertyExpression(CTRL_MENU_IDS.design.size)};

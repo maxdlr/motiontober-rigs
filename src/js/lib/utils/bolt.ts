@@ -112,10 +112,10 @@ export const evalTS = <
 export const evalFile = (file: string) => {
   return evalES(
     "typeof $ !== 'undefined' ? $.evalFile(\"" +
-      file +
-      '") : fl.runScript(FLfile.platformPathToURI("' +
-      file +
-      '"));',
+    file +
+    '") : fl.runScript(FLfile.platformPathToURI("' +
+    file +
+    '"));',
     true
   );
 };
