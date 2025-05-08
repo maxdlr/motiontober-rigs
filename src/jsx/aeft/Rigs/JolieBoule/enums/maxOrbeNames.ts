@@ -1,90 +1,90 @@
 import { MTB_RIGS_NAMES } from "../../enums/MtbRigsNames";
 
-export const JOLIEBOULE = "JolieBoule";
-export const MainIdentifier = `${MTB_RIGS_NAMES.ORG.toLowerCase()}-${JOLIEBOULE.toLowerCase()}`
+const JOLIEBOULE = "JolieBoule";
+
 export const MainController = `[CTRL] - ${JOLIEBOULE}`;
 export const MainPseudoEffect = `${MTB_RIGS_NAMES.ORG} - ${JOLIEBOULE}`;
 export const MainShapeLayer = JOLIEBOULE;
 
-export const Orbiter1 = "Orbiter - 1";
-export const Orbiter2 = "Orbiter - 2";
+export const Orbiter1 = "Orbiter.1";
+export const Orbiter2 = "Orbiter.2";
 
 export const TOP = {
-  _: "Top",
+  _: "[T]",
   orbe: {
-    _: "Top - Orbe",
-    path: "Top - Orbe - Path",
-    gradientFill: "Top - Orbe - Gradient Fill",
+    _: "[T].orbe",
+    path: "[T].orbe.path",
+    gradientFill: "[T].orbe.gradFill",
   },
   dome: {
-    _: "Top - Dome",
-    front: "Top - Dome - Front",
+    _: "[T].dome",
+    front: "[T].dome.Front",
     main: {
-      _: "Top - Dome - Main",
-      body: "Top Dome - Main - Body",
-      mask: "Top Dome - Main - Mask",
-      mergePaths: "Top - Dome - Main - Merge Paths",
+      _: "[T].dome.main",
+      body: "[T].dome.main.body",
+      mask: "[T].dome.main.mask",
+      mergePaths: "[T].dome.main.mergePaths",
     },
-    mergePaths: "Top - Dome - Merge Paths",
-    fill: "Top - Dome - Fill"
+    mergePaths: "[T].dome.mergePaths",
+    fill: "[T].dome.fill"
   }
 }
 
 export const BOTTOM = {
-  _: "Bottom",
-  body: "Bottom - Body",
+  _: "[B]",
+  body: "[B].body",
   orbe: {
-    _: "Bottom - Orbe",
-    path: "Bottom - Orbe - Path",
-    gradientFill: "Bottom - Orbe - Gradient Fill",
+    _: "[B].orbe",
+    path: "[B].orbe.path",
+    gradientFill: "[B].orbe.gradFill",
   },
   dome: {
-    _: "Bottom - Dome",
-    front: "Bottom - Dome - Front",
+    _: "[B].dome",
+    front: "[B].dome.Front",
     main: {
-      _: "Bottom - Dome - Main",
-      body: "Bottom - Dome - Main - Body",
-      mask: "Bottom - Dome - Main - Mask",
-      mergePaths: "Bottom - Dome - Main - Merge Paths",
+      _: "[B].dome.main",
+      body: "[B].dome.main.body",
+      mask: "[B].dome.main.mask",
+      mergePaths: "[B].dome.main.mergePaths",
     },
-    mergePaths: "Bottom - Dome - Merge Paths",
-    fill: "Bottom - Dome - Fill"
+    mergePaths: "[B].dome.mergePaths",
+    fill: "[B].dome.fill"
   }
 }
 
 export const BODY = {
-  _: "Body",
-  stroke: "Body - Stroke",
+  _: "body",
+  stroke: "body.stroke",
   bottom: {
-    _: "Body - Bottom",
-    back: "Body - Bottom - Back",
-    main: "Body - Bottom - Main",
+    _: "body.[U]",
+    back: "body.[U].back",
+    main: "body.[U].main",
     body: {
-      _: "Body - Bottom - Body",
-      mask: "Body - Bottom - Body - Mask",
+      _: "body.[U].body",
+      mask: "body.[U].body.mask",
     },
-    merge: "Body - Bottom - Body - Merge",
-    gradientFill: "Body - Bottom - Body - Gradient Fill",
+    merge: "body.[U].body.Merge",
+    gradientFill: "body.[U].body.gradFill",
   },
   top: {
-    _: "Body - Top",
+    _: "body.[O]",
     hole: {
-      _: "Body - Top - Hole",
-      fill: "Body - Top - Hole - Fill",
+      _: "body.[O].hole",
+      fill: "body.[O].hole.fill",
     },
     main: {
-      _: "Body - Top - Main",
-      fill: "Body - Top - Main - Fill",
-      stroke: "Body - Top - Main - Stroke"
+      _: "body.[O].main",
+      fill: "body.[O].main.fill",
+      stroke: "body.[O].main.stroke"
     }
   }
 }
 
 export const REFLECTION = {
-  _: "Reflection",
-  path: "Reflection - Path",
-  trimPath: "Reflection - Trim Path",
-  stroke: "Reflection - Stroke"
+  _: "reflection",
+  path: "reflection.path",
+  trimPath: "reflection.trimPath",
+  stroke: "reflection.stroke"
 }
 
 export const CTRL_MENU_IDS = {
@@ -98,128 +98,31 @@ export const CTRL_MENU_IDS = {
   },
   design: {
     size: 11,
+    head: {
+      enabled: 13,
+      offset: 14,
+      wiggle: {
+        frequency: 16,
+        amplitude: 17
+      }
+    },
     stroke: {
-      color: 13,
-      width: 14
+      color: 21,
+      width: 22
     },
     dome: {
-      enabled: 17,
-      color: 18,
-      opacity: 19,
+      enabled: 25,
+      color: 26,
+      opacity: 27,
       reflection: {
-        width: 21,
-        opacity: 22
+        width: 29,
+        opacity: 30
       }
     },
     hole: {
-      size: 26,
-      color: 27
+      size: 34,
+      color: 35
     },
-    head: {
-      enabled: 30,
-      offset: 31,
-      wiggle: {
-        frequency: 33,
-        amplitude: 34
-      }
-    }
   },
 }
 
-export const CTRL_MENU = {
-  transform: {
-    _: "Transform",
-    positionOffset: {
-      id: 2,
-    },
-  },
-  design: {
-    _: "Design",
-    size: "body.size",
-    stroke: {
-      _: "stroke",
-      color: "body.stroke.color",
-      width: "body.stroke.width"
-    },
-    dome: {
-      _: "Dome",
-      enabled: "Active Top Dome",
-      color: "body.dome.color",
-      opacity: "body.dome.opacity",
-      reflection: {
-        width: "reflection.stroke.width"
-      }
-    },
-    hole: {
-      _: "Hole",
-      size: "body.hole.size",
-      color: "body.hole.color"
-    },
-    head: {
-      _: "Head",
-      enabled: "Active mini-orbe",
-      offset: "body.orbe.offset",
-      wiggle: {
-        frequency: "body.orbe.wiggle.freq",
-        amplitude: "body.orbe.wiggle.amp"
-      }
-    }
-  },
-  dynamics: {
-    _: "Dynamics",
-    rotation: {
-      x: "body.rot.x",
-      y: "body.rot.y"
-    }
-  }
-}
-
-// export const CTRL_MENU = {
-//   transform: {
-//     _: "Transform",
-//     positionOffset: "Anchor Offset",
-//     legs: {
-//       _: "Orbiters",
-//       offset: "body.leg.offset"
-//     }
-//   },
-//   design: {
-//     _: "Design",
-//     size: "body.size",
-//     stroke: {
-//       _: "stroke",
-//       color: "body.stroke.color",
-//       width: "body.stroke.width"
-//     },
-//     dome: {
-//       _: "Dome",
-//       enabled: "Active Top Dome",
-//       color: "body.dome.color",
-//       opacity: "body.dome.opacity",
-//       reflection: {
-//         width: "reflection.stroke.width"
-//       }
-//     },
-//     hole: {
-//       _: "Hole",
-//       size: "body.hole.size",
-//       color: "body.hole.color"
-//     },
-//     head: {
-//       _: "Head",
-//       enabled: "Active mini-orbe",
-//       offset: "body.orbe.offset",
-//       wiggle: {
-//         frequency: "body.orbe.wiggle.freq",
-//         amplitude: "body.orbe.wiggle.amp"
-//       }
-//     }
-//   },
-//   dynamics: {
-//     _: "Dynamics",
-//     rotation: {
-//       x: "body.rot.x",
-//       y: "body.rot.y"
-//     }
-//   }
-// }

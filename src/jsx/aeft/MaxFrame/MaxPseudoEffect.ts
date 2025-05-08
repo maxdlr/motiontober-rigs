@@ -92,7 +92,7 @@ function getUserDataFolder() {
     );
 
     // Debug log
-    alert("Attempting to use folder: " + aescriptsFolder.absoluteURI);
+    // alert("Attempting to use folder: " + aescriptsFolder.absoluteURI);
 
     if (!aescriptsFolder.exists) {
       // Try to create the folder
@@ -169,7 +169,6 @@ function createResourceFile(filename, binaryString, resourceFolder) {
 
       // Verify the file exists after writing
       if (myFile.exists) {
-        alert("Successfully created file: " + myFile.absoluteURI);
         return myFile;
       } else {
         alert(

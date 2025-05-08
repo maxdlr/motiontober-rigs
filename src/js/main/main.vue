@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref, Ref } from "vue";
-import { JOLIEBOULE } from "../../jsx/aeft/Rigs/JolieBoule/enums/maxOrbeNames";
-import { evalES } from "../lib/utils/bolt";
+import { MainShapeLayer } from "../../jsx/aeft/Rigs/JolieBoule/enums/maxOrbeNames";
+import { evalES, openLinkInBrowser } from "../lib/utils/bolt";
 import settings from "./settings.vue";
 import RigButton from "./components/RigButton.vue";
 import darkModeButton from "./components/darkModeButton.vue";
@@ -23,13 +23,13 @@ const openSettings = () => {
 </script>
 
 <template>
-  <main class="h-[100vh] max-sm:p-1 p-2" :class="[isDarkMode ? 'bg-[#0000C2]' : 'bg-[#FFD052]']">
+  <main class="h-[100vh] max-sm:p-1 p-2 transition-all" :class="[isDarkMode ? 'bg-[#0000C2]' : 'bg-[#FFD052]']">
     <section class="flex flex-wrap justify-between items-center gap-2 max-sm:hidden">
       <div>
         <span class="text-sm font-bold text-[#0000C2]">Motiontober Rigs ♥ </span>
       </div>
-      <span class="text-[#0000C2] font-bold opacity-50 max-sm:hidden"><a class="underline"
-          href="https://motion.maxdlr.com">Maxdlr</a>
+      <span class="text-[#0000C2] font-bold opacity-50 max-sm:hidden"><button class="underline"
+          @click="openLinkInBrowser('https://motion.maxdlr.com')">Maxdlr</button>
       </span>
     </section>
 
@@ -38,7 +38,7 @@ const openSettings = () => {
     </section>
 
     <section class="flex flex-wrap justify-start items-start gap-3 p-2">
-      <RigButton @click="addJolieBoule" :label="JOLIEBOULE" />
+      <RigButton @click="addJolieBoule" :label="MainShapeLayer" />
       <darkModeButton @toggle="toggleDarkMode" />
 
       <button class="self-center" @click="openSettings"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
