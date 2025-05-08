@@ -24,6 +24,7 @@ Get advanced rigs with just one click.
 ## Supported Rig Showcase
 ### JolieBoule
 > Featured with legs from [Animatable's Limber](https://www.animatable.co/limber).
+
 ![current-project](https://github.com/user-attachments/assets/560ccc4e-6fb4-4e00-9187-184816fab03c)
 
 ## Development
